@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_readings
+    description: "Cleaned staging view over raw readings."
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: device
+        tests:
+          - not_null
+      - name: metric
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['temperature', 'vibration']

@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: readings_hourly
+    description: "Per device + metric hourly aggregates."
+    columns:
+      - name: device
+        tests: [not_null]
+      - name: metric
+        tests: [not_null]
+      - name: hour
+        tests: [not_null]
+
+  - name: readings_flagged
+    description: "Per-reading z-score and anomaly flag."
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: device
+        tests: [not_null]
+      - name: is_anomaly
+        tests: [not_null]

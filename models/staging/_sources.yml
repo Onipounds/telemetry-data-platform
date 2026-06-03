@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: telemetry
+    description: "Raw telemetry loaded into Postgres"
+    schema: public
+    tables:
+      - name: readings
+        description: "Raw device readings (one row per reading)"
