@@ -1,0 +1,7 @@
+services:
+  airflow-worker:
+    volumes:
+      - C:/Users/Femio/Downloads/telemetry_dbt:/opt/airflow/telemetry_dbt
+      - C:/Users/Femio/.dbt:/opt/airflow/dbt_profiles
+    environment:
+      DBT_PROFILES_DIR: /opt/airflow/dbt_profiles
