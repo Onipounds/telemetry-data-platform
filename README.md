@@ -1,4 +1,4 @@
-# ekf-sensor-fusion
+# Ekf-sensor-fusion
 
 A compact, well-tested **Extended Kalman Filter (EKF)** for 2-D target tracking
 and sensor fusion. The numerical core is model-agnostic; a worked
